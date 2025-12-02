@@ -3,16 +3,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #Parâmetros
-Vin = 50     #tensão de entrada (V)
-Vout = 20     #tensão desejada na saída
-L = 1.2e-3     #indutância do indutor (H) = 1,2 mH
-R = 4.0       #resistência de carga (Ω)
-C = 15.63e-6   #capacitância do capacitor de saída (F)
+Vin = 55     #tensão de entrada (V)
+Vout = 32     #tensão desejada na saída
+L = 2.1344e-3     #indutância do indutor (H) = 1,2 mH
+R = 10.24       #resistência de carga (Ω)
+C = 6.1035e-6  #capacitância do capacitor de saída (F)
 Fs = 20e3      #frequência de chaveamento (Hz) 
 Ts = 1 / Fs    #período de chaveamento (s)
 
 #DUTY CYCLE
-D = Vout / Vin         #D = 0.4
+D = Vout / Vin         #D = 0.5
 
 # Tempo de simulação: 5 ms para ver o amortecimento
 t_end = 5e-3           # 5 ms
@@ -47,7 +47,7 @@ for k in range(len(t) - 1):
 plt.figure(figsize=(10, 4))
 plt.plot(t * 1e3, vout, label='Tensão de Saída (vout)')
 plt.axhline(Vout, color='red', linestyle='--', label=f'Média Teórica = {Vout:.1f} V')
-plt.title('Resposta Transitória e Estabilização da Tensão de Saída (50 V → 20 V)')
+plt.title('Resposta Transitória e Estabilização da Tensão de Saída (55 V ==> 32 V)')
 plt.xlabel('Tempo (ms)')
 plt.ylabel('Tensão (V)')
 plt.grid(True)
