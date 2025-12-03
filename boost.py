@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #Parâmetros
-Vin = 180.0      #tensão de entrada (V)
-Vout_ref = 380.0      #tensão de saída desejada (V)
+Vin = 180     #tensão de entrada (V)
+Vout_ref = 380      #tensão de saída desejada (V)
 Fs = 40e3       #frequência de chaveamento (Hz)
 Ts = 1 / Fs     #período de chaveamento (s)
 VIl = 0.20             #20% de ripple na corrente do indutor
